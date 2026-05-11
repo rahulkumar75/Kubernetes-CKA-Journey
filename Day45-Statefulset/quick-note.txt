@@ -1,0 +1,11 @@
+1. create dir in worker node:
+docker exec -it cka-cluster-worker bash
+mkdir -p /data/mongo-{0..4}
+
+2. Service
+3. Storage class
+4. PV
+5. Statefulset
+6. scale up/down
+
+
