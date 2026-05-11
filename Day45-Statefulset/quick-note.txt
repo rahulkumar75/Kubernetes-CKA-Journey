@@ -8,4 +8,23 @@ mkdir -p /data/mongo-{0..4}
 5. Statefulset
 6. scale up/down
 
+------
+Delete in reverse order (safest)
+kubectl delete statefulset mongodb
+kubectl delete pvc --all          # or -l app=mongodb
+kubectl delete pv --all
+kubectl delete sc mongodb-sc
+kubectl delete svc mongodb-service
+---
+Why this order? StatefulSet first — otherwise it may try to recreate pods while you're cleaning up. 
+PVCs before PVs — PVs can get stuck in Terminating if a PVC still references them.
+---
+-------
 
+-------
+Or — one-liner if everything is in a namespace
+kubectl delete all --all                    # pods, deployments, statefulsets, services
+kubectl delete pvc,pv,sc --all              # storage resources (not included in 'all')
+
+# kubectl delete all does not delete PVs, PVCs, or StorageClasses — you must delete those explicitly.
+-------
