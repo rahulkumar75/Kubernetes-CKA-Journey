@@ -4,7 +4,7 @@ nodes:
 - role: control-plane
 - role: worker
   labels:
-    node-type: worker-2
+    node-type: worker-1
 - role: worker
   labels:
-    node-type: worker-3
+    node-type: worker-2

@@ -15,6 +15,21 @@
 6. [Useful Commands](#useful-commands)
 
 ---
+## Final Working Logic
+
+```text
+Cluster Full
+    ↓
+Low priority pods consuming resources
+    ↓
+High priority pod arrives
+    ↓
+Scheduler checks eviction possibility
+    ↓
+Lower-priority pods evicted
+    ↓
+High-priority pod scheduled
+```
 
 ## Why Pods Go Pending
 
