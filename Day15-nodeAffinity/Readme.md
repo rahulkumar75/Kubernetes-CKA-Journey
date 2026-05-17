@@ -1,5 +1,3 @@
-[Image](https://images.openai.com/static-rsc-4/uJfgNTkIDbN_Uq85dpXV_gNtBeoSVNyPsyatKHcAXG7h5TZoWAnBJqS42tFTPGkTWiMaencfruPUTON4gSuz4CqB6aMdNNd6AfsrjYHz0TcEh1Qul4--rSe24yesVHL9xItu48o0LkpIeKE_p2pNYua58McLb8p35TwQF9ofqpSymSnzfOJ3KzpeBt6QIgjl?purpose=fullsize)
-
 # 🆚 Node Affinity vs Taints & Tolerations
 
 | Feature | Node Affinity | Taints & Tolerations |
@@ -78,11 +76,7 @@ Basic scheduling may not be enough when:
 
 [Image](https://images.openai.com/static-rsc-4/kxRWRXAUREtfsFkzw-bzAwJgCsj-mQLM887wZ53-5ZIhYdE2semvwQzrlTJFPum8UDM2DIkbDfb9HdXkHU_kaGtNdKCg2U_BQQeNiI7dORpHJz6KrVei_JR85fH2e9Q8H882KtyVpDu_LDTWS_EBXTi5JeVsCeRBiubWQUGPbbDpFtGG8c7AYAPGUP5c5oMA?purpose=fullsize)
 
-[Image](https://images.openai.com/static-rsc-4/qF6_WCJjjdFCXOXOXVsJeuUmS0Wm3DVrM-loJJh0Otj6f8HgtT17oMiR9cu1P4WaUvbvW_djosh7mRUHcMh05JzZzqXJBLUxhtqYlxSepBiGwFDa-DqOCLmdGkr56qiZOC6gdURyOUXGDgyHNxvnj1HLf9bHqlYdklkeNWN4IQQ_toyAwB0JO3qPkHP8ERUm?purpose=fullsize)
 
-[Image](https://images.openai.com/static-rsc-4/Svd7i2Pn3z-IqeQwupz4rShvDWG7sUfMF6MnELYLuYH-MUNk106KJqhu3nNfYIItyfUj2ejrQrwQn-bhT7LiCnLjBswVIR5L8vKWuIE3fAhCQ2PS9FQf0EoJJ-y25mz1eJgZefj2czYv4Ag4-9N9M-gUOd63cciTBVVUWGTdo387XPC9OsiIfBAlGlU1fhkZ?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/ApjwgHLzfsZC4gM5wCphHxEsOxCrAUX0_Ys-CUrseeLpuVDzr8UL2Ok0VOo7JumgfPkWM9mMIR2ERib6Y30HAMJ2IFQkaM0DqgMl6_PhGeaoJY3QO5CLOiz0sA4TVZPXw058ZnZBX_b7jvxxOQfFmlyP__uYR-znEqrs3mFpE_4T4SDq6TI2Asupoc0isXNH?purpose=fullsize)
 
 ---
 
@@ -224,13 +218,6 @@ operator: Exists
 
 [Image](https://images.openai.com/static-rsc-4/1N2nKBt3aRAmhJv5kFwDG-9AKtc6tCdNZCoszJ1dFwv61eYPDw_RnKrdUpw2qglZIa837-b0GY8wPQIkJID523GoRFUGBNyFdS8Lcjj07eq5datqPwdlN5fUenWYzzEcEMLZ-QFVJdkbyMUw1R00cwt2U3AqiF5HFjmamMtWYPB_4qQWxQUSlP4g62jnnJ2c?purpose=fullsize)
 
-[Image](https://images.openai.com/static-rsc-4/4XWXeC2sqhrTXygl2p2qFNiGSKLoljTTBm9NSQTwRCj5noIV8LJEkGyE5V-6CK4YdhK7ht5qDNdtGDVm6bOGWSMp6Xehy-jt8_d8ROUgi12mLAvSypQREjovTCveRqUTk522ggTyVvlopvc96hKsG2GYbBJcxox5JUy330DL1e6_LDtg_o28mmDeCWSg85sj?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/xNoQUcfknTW1MwdOs_l1qaR5B3xcX5edl_7PG4qBcKhG8FLeaHqwV9ucdDRrugcWVpwj4EARRdZRa-tiKtUoFhrZp80cMq0Dz9eAIDefYHTKU7HHVEt2hl0EWr5sruejiHelG-vdAzBgc_PJdvKgN8gBrFgOgnhs-lxqYM_n38ZyJZrWhnidmwIByZtuAZk2?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/8mwKYHTF_VmxShXiIwovh3C3fIeExY64is91nnTvyyG_Uq8L_U2q73vJPltbYb4WUvvreVTfFbmvoAzplDxO9X3gxTyhNRjNhKur5ATDK-rVyMilCjvm9eftgcCcTDxGRjP3KkrT6qTA8L3eSOk8mDCSOQ0OlCqz_qe50PlDD0DcrzI4GZ2rxXM0fhltHTnE?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/A9Z3jqTHAC_ILc24ley6tG7pmm6r1azzmpW5vqTckNCcVofXc2lIYZH04_XcXX_ZUfiJKMkl3nDNCAbJfzaL8yVzuF9j-18a_OxdiOK14omsQVCJ8-OSLrABposF6QIbc4FAkR8b7OEK5QeRE-VhYmQZW_ySBj2EGuC1FV8aAmxCjbTe-Br8WDZVIXl3yWrH?purpose=fullsize)
 
 ---
 
@@ -264,7 +251,6 @@ operator: Exists
 
 ---
 
----
 
 If you want next step, I can give you:
 
@@ -352,11 +338,6 @@ Basic scheduling may not be enough when:
 
 [Image](https://images.openai.com/static-rsc-4/kxRWRXAUREtfsFkzw-bzAwJgCsj-mQLM887wZ53-5ZIhYdE2semvwQzrlTJFPum8UDM2DIkbDfb9HdXkHU_kaGtNdKCg2U_BQQeNiI7dORpHJz6KrVei_JR85fH2e9Q8H882KtyVpDu_LDTWS_EBXTi5JeVsCeRBiubWQUGPbbDpFtGG8c7AYAPGUP5c5oMA?purpose=fullsize)
 
-[Image](https://images.openai.com/static-rsc-4/qF6_WCJjjdFCXOXOXVsJeuUmS0Wm3DVrM-loJJh0Otj6f8HgtT17oMiR9cu1P4WaUvbvW_djosh7mRUHcMh05JzZzqXJBLUxhtqYlxSepBiGwFDa-DqOCLmdGkr56qiZOC6gdURyOUXGDgyHNxvnj1HLf9bHqlYdklkeNWN4IQQ_toyAwB0JO3qPkHP8ERUm?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/Svd7i2Pn3z-IqeQwupz4rShvDWG7sUfMF6MnELYLuYH-MUNk106KJqhu3nNfYIItyfUj2ejrQrwQn-bhT7LiCnLjBswVIR5L8vKWuIE3fAhCQ2PS9FQf0EoJJ-y25mz1eJgZefj2czYv4Ag4-9N9M-gUOd63cciTBVVUWGTdo387XPC9OsiIfBAlGlU1fhkZ?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/ApjwgHLzfsZC4gM5wCphHxEsOxCrAUX0_Ys-CUrseeLpuVDzr8UL2Ok0VOo7JumgfPkWM9mMIR2ERib6Y30HAMJ2IFQkaM0DqgMl6_PhGeaoJY3QO5CLOiz0sA4TVZPXw058ZnZBX_b7jvxxOQfFmlyP__uYR-znEqrs3mFpE_4T4SDq6TI2Asupoc0isXNH?purpose=fullsize)
 
 ---
 
@@ -494,20 +475,6 @@ operator: Exists
 
 # ⚡ Node Affinity + Taints & Tolerations
 
-## 📷 Combined Approach
-
-[Image](https://images.openai.com/static-rsc-4/1N2nKBt3aRAmhJv5kFwDG-9AKtc6tCdNZCoszJ1dFwv61eYPDw_RnKrdUpw2qglZIa837-b0GY8wPQIkJID523GoRFUGBNyFdS8Lcjj07eq5datqPwdlN5fUenWYzzEcEMLZ-QFVJdkbyMUw1R00cwt2U3AqiF5HFjmamMtWYPB_4qQWxQUSlP4g62jnnJ2c?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/4XWXeC2sqhrTXygl2p2qFNiGSKLoljTTBm9NSQTwRCj5noIV8LJEkGyE5V-6CK4YdhK7ht5qDNdtGDVm6bOGWSMp6Xehy-jt8_d8ROUgi12mLAvSypQREjovTCveRqUTk522ggTyVvlopvc96hKsG2GYbBJcxox5JUy330DL1e6_LDtg_o28mmDeCWSg85sj?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/xNoQUcfknTW1MwdOs_l1qaR5B3xcX5edl_7PG4qBcKhG8FLeaHqwV9ucdDRrugcWVpwj4EARRdZRa-tiKtUoFhrZp80cMq0Dz9eAIDefYHTKU7HHVEt2hl0EWr5sruejiHelG-vdAzBgc_PJdvKgN8gBrFgOgnhs-lxqYM_n38ZyJZrWhnidmwIByZtuAZk2?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/8mwKYHTF_VmxShXiIwovh3C3fIeExY64is91nnTvyyG_Uq8L_U2q73vJPltbYb4WUvvreVTfFbmvoAzplDxO9X3gxTyhNRjNhKur5ATDK-rVyMilCjvm9eftgcCcTDxGRjP3KkrT6qTA8L3eSOk8mDCSOQ0OlCqz_qe50PlDD0DcrzI4GZ2rxXM0fhltHTnE?purpose=fullsize)
-
-[Image](https://images.openai.com/static-rsc-4/A9Z3jqTHAC_ILc24ley6tG7pmm6r1azzmpW5vqTckNCcVofXc2lIYZH04_XcXX_ZUfiJKMkl3nDNCAbJfzaL8yVzuF9j-18a_OxdiOK14omsQVCJ8-OSLrABposF6QIbc4FAkR8b7OEK5QeRE-VhYmQZW_ySBj2EGuC1FV8aAmxCjbTe-Br8WDZVIXl3yWrH?purpose=fullsize)
-
----
-
 ## 🔥 Why Combine Both?
 
 | Feature | Role |
@@ -538,7 +505,6 @@ operator: Exists
 
 ---
 
----
 
 If you want next step, I can give you:
 
