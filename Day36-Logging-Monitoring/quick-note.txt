@@ -1,0 +1,24 @@
+K8s not offer monitoring and logging by default.
+
+Metrics Server:
+We install Metrics Server to monitor and logging the resources in k8s cluster.
+
+CRICTL:
+we are using “containerd” instead of Docker.
+- We troubleshoot the cluster at the c**ontainer level.**
+- In the case of **Docker runtime**, we use client: docker `docker ps.`
+- In the case of **containerd**, we use client: critcl `crictl ps`
+
+Use 1: List containers in cluster
+When API server not respond -> kubectl client will not work.
+So, we use crictl. (will work at container level)
+Ex: crictl ps
+
+Use 2: Pull Image
+When container unable to pull the image from registry, we manually pull image by,
+crictl pull <img-name>
+
+
+Use 3: Find logs
+- crictl ps → We get the container ID.
+- crictl logs -f <container-id>

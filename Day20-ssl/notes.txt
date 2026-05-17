@@ -1,0 +1,11 @@
+EXEC inside the nginx pod-
+k exec -it nginx-deploy-ssl-5f49647d8b-5cfms -- sh
+
+- Apache/Nginx (OpenSSL): Run the following command, replacing `yourdomain` with your actual domain name:
+
+`openssl req -new -newkey rsa:2048 -nodes -keyout yourdomain.key -out yourdomain.csr`
+
+-- Then copy whole content of -> .csr file 
+
+- Decode CSR file -> openssl req -in yourdomain.csr -noout -text
+- Decode can be via online website

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: new-nginx-pod
+  name: new-nginx-pod
+spec:
+  containers:
+  - image: nginx
+    name: new-nginx-pod
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

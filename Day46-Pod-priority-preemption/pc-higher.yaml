@@ -1,0 +1,9 @@
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata: 
+  name: higher-priority
+value: 100000
+globalDefault: false
+preemptionPolicy: PreemptLowerPriority # evicts lower-priority pods to schedule this one
+description: "Cirtical production workload"
+

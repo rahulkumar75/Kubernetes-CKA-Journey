@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-pv
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - mountPath: /tmp/pv-data
+      name: my-storage
+
+  volumes:
+  - name: my-storage
+    persistentVolumeClaim:
+      claimName: pvc-demo
+

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-vol-config
+data:
+  username: admin-rahul
+  access_level: "1"

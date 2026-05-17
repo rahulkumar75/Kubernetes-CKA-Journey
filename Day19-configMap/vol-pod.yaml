@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vol-pod
+spec:
+  containers:
+  - name: vol-pod
+    image: redis
+    command: ["/bin/bash", "-c", "printenv && sleep 3600"]
+    volumeMounts:
+    - name: foo
+      mountPath: "/etc/foo"
+      readOnly: true
+
+  volumes:
+  - name: foo
+    configMap:
+      name: my-vol-config
+
+
+

@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv-0
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: mongodb-sc
+  hostPath: 
+    path: /data/mongo-0
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv-1
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: mongodb-sc
+  hostPath: 
+    path: /data/mongo-1
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv-2
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: mongodb-sc
+  hostPath: 
+    path: /data/mongo-2
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv-3
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: mongodb-sc
+  hostPath: 
+    path: /data/mongo-3
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongodb-pv-4
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: mongodb-sc
+  hostPath: 
+    path: /data/mongo-4
+

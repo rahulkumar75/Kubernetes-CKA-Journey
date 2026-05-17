@@ -1,0 +1,27 @@
+apiVersion: apps/v1 # Example - using nodeSelectors, Pods make that decision on which node they want to go
+kind: Deployment
+metadata:
+  name: nginx-pod
+  labels:
+    env: demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      env: demo
+  template:
+    metadata:
+      labels:
+        env: demo
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-con
+        ports:
+        - containerPort: 80
+      
+      nodeSelector:
+        gpu: "false"
+
+        
+    

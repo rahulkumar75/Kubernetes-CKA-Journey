@@ -1,0 +1,5 @@
+image:
+  repository: busybox
+  tag: latest
+  pullPoicly: IfNotPresent
+appMessage: "Shipping Service"

@@ -1,0 +1,17 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: "2026-04-21T11:47:47Z"
+  name: dev-role
+  namespace: dev
+  resourceVersion: "265151"
+  uid: 27291345-1701-442b-b103-bf90a6706f94
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+  - list
+  - watch

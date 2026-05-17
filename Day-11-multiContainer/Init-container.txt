@@ -1,0 +1,69 @@
+Name:             myapp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             cka-cluster-3-worker2/172.18.0.7
+Start Time:       Tue, 07 Apr 2026 04:42:13 +0530
+Labels:           app=demo
+Annotations:      <none>
+Status:           Pending
+IP:               10.244.1.6
+IPs:
+  IP:  10.244.1.6
+Init Containers:
+  init-myservice:
+    Container ID:  containerd://763991722b6d8699d7a002535d1f94d2342971cbb6ef5655eb8a558ebd0c2bb3
+    Image:         busybox:latest
+    Image ID:      docker.io/library/busybox@sha256:1487d0af5f52b4ba31c7e465126ee2123fe3f2305d638e7827681e7cf6c83d5e
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+    Args:
+      until nslookup myservice.default.svc.cluster.local; do echo waiting for the service; sleep 2; done
+    State:          Running
+      Started:      Tue, 07 Apr 2026 04:42:20 +0530
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-zvgq4 (ro)
+Containers:
+  myapp-container:
+    Container ID:  
+    Image:         busybox:latest
+    Image ID:      
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      sh
+      -c
+      echo the app is running && sleep 3600
+    State:          Waiting
+      Reason:       PodInitializing
+    Ready:          False
+    Restart Count:  0
+    Environment:
+      FIRST_NAME:  Rahul
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-zvgq4 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 False 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-zvgq4:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:                      <none>

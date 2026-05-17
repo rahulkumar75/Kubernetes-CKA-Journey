@@ -1,0 +1,37 @@
+Service Account gives -> Identity for pod/workload.
+
+SA = Who are you?
+Role = What can you do?
+Binding = Who gets what?
+
+Diff:
+ServiceAccount -> Identity
+Role -> Permission
+
+Inside container 3 files:
+/var/run/secrets/kubernetes.io/serviceaccount
+-> ca.crt  namespace  token
+
+-----
+# ls -lrt     
+total 0
+lrwxrwxrwx 1 root root 12 Apr 21 06:38 token -> ..data/token
+lrwxrwxrwx 1 root root 16 Apr 21 06:38 namespace -> ..data/namespace
+lrwxrwxrwx 1 root root 13 Apr 21 06:38 ca.crt -> ..data/ca.crt
+----
+
+#Service Account only gives identity.
+#Permission comes from:
+- Role + RoleBinding
+- ClusterRole + ClusterRoleBinding
+
+
+Created by using cmd:
+kubectl create role dev-role -n dev --verb=get,list,watch --resource=pods -o yaml > role.yaml
+kubectl create rolebinding dev-rolebinding -n dev --role=dev-role --serviceaccount=dev:dev-sa -o yaml > rolebinding.yaml
+
+
+Testing:(yes/no)
+kubectl auth can-i get pods --as=system:serviceaccount:dev:dev-sa -n dev
+kubectl auth can-i list pods --as=system:serviceaccount:dev:dev-sa -n dev
+kubectl auth can-i create pods --as=system:serviceaccount:dev:dev-sa -n dev

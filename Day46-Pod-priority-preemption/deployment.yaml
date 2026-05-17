@@ -1,0 +1,40 @@
+# deployment.yaml — 5 replicas, each requesting 500m CPU and 1Gi RAM
+# Total consumed: ~2.5 CPU cores, ~5 GB RAM
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: nginx
+  labels:
+    env: dev
+
+spec:
+  replicas: 5
+
+  selector:
+    matchLabels:
+      env: demo
+
+  template:
+    metadata:
+      labels:
+        env: demo
+
+    spec:
+      priorityClassName: lower-priority
+      containers:
+        - name: nginx
+          image: nginx:latest
+
+          resources:
+            requests:
+              cpu: "3000m"
+              memory: "1Gi"
+
+            # limits:
+            #   cpu: "3000m"
+            #   memory: "1Gi"
+
+          ports:
+            - containerPort: 80

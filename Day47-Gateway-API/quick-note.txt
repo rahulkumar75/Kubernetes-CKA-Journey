@@ -1,0 +1,14 @@
+Installation:
+Intall Gateway API CRDs and ENVOY Gateway:
+helm install eg oci://docker.io/envoyproxy/gateway-helm --version v1.6.1 -n envoy-gateway-system --create-namespace
+
+Check the status:
+kubectl wait --timeout=5m -n envoy-gateway-system deployment/envoy-gateway --for=condition=Available
+
+ENVOY:
+To learn more about the release, try:
+helm status eg -n envoy-gateway-system
+helm get all eg -n envoy-gateway-system
+
+What This HTTPRoute Does
+Request → Gateway(eg) → HTTPRoute → backend Service → Pod

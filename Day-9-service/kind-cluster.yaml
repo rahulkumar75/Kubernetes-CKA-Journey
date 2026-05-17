@@ -1,0 +1,17 @@
+apiVersion: kind.x-k8s.io/v1alpha4
+kind: Cluster
+name: cka-cluster-3   # optional but better here
+
+nodes:
+- role: control-plane
+  extraPortMappings:
+    - containerPort: 30001
+      hostPort: 30001
+
+- role: worker
+  labels:
+    node-type: worker-2
+
+- role: worker
+  labels:
+    node-type: worker-3

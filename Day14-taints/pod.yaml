@@ -1,0 +1,30 @@
+apiVersion: apps/v1   # Taints & tolerations work as restrictions applied to the node.
+kind: Deployment
+metadata:
+  name: nginx-pod
+  labels:
+    env: demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      env: demo
+  
+  template:
+    metadata:
+      labels:
+        env: demo
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-con
+        ports:
+        - containerPort: 80
+      
+      tolerations:
+      - key: "gpu"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+        
+    

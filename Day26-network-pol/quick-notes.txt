@@ -1,0 +1,27 @@
+
+Create cluster - 
+    - With disableDefaultCNI: true
+    - Cluster will come up without networking until you install CNI.
+    - Pods like CoreDNS stay Pending until CNI installed. (That is expected.)
+    - So after cluster create, immediately install:
+    - Best Choice for your Netpol lab:
+    - Calico / Cilium
+
+Install Calico:
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.30.3/manifests/calico.yaml
+Wait:
+kubectl get pods -n kube-system -w
+
+Test Befor Ploicy
+kubectl run test --rm -it --image=busybox -n ecommerce -- sh
+
+Frontend Pod → Backend
+kubectl exec -it deploy/frontend -n ecommerce -- sh
+wget -qO- backend:8080 | curl backend:8080 
+
+If command not found:
+apt-get update && apt-get install wget -y
+
+Network Ploicy:
+kubectl get netpol -n ecommerce
+kubectl describe netpol -n ecommerce

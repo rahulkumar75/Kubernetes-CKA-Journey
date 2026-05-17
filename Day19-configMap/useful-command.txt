@@ -1,0 +1,11 @@
+🔹 Useful Debug Commands
+
+kubectl describe configmap my-config
+kubectl get configmap my-config -o yaml
+kubectl explain pod.spec.containers.env.valueFrom
+
+🔥 Bonus (Exam Hack)
+If stuck: 👉 Use this as reference format:
+kubectl create configmap my-config --from-literal=fname=rahul --dry-run=client -o yaml
+
+kubectl get configmap my-config -o yaml

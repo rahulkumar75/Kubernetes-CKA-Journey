@@ -1,0 +1,18 @@
+Inside pod -
+apt-get update && apt-get install -y procps
+
+
+#In KIND:
+hostPath refers to node container filesystem, not laptop filesystem.
+
+#CKA Exam Tip
+In exam use:
+hostPath for quick local lab
+know PVC binding
+know pod mount syntax
+
+#Quick-Command 
+kubectl get pv
+kubectl get pvc
+kubectl describe pvc task-pv-claim
+kubectl get pod

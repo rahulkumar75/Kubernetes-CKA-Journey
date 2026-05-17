@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deploy-ssl
+  labels:
+    env: demo
+spec: #this spec is for deployment
+  template:
+    metadata:
+      name: nginx
+      labels:
+        env: demo
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:1.23.0
+  replicas: 3
+  selector:
+    matchLabels:
+      env: demo

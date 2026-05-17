@@ -1,0 +1,2 @@
+Kubeadm -> a tool to bootstrap the k8s cluster; Installs cp-node component. Make cluster ready to server.
+
