@@ -12,3 +12,11 @@ helm get all eg -n envoy-gateway-system
 
 What This HTTPRoute Does
 Request → Gateway(eg) → HTTPRoute → backend Service → Pod
+
+
+kubectl port-forward svc/envoy-default-eg-e41e7b31 8080:80 -n envoy-gateway-system
+curl -H "Host: backends.example" http://localhost:8080
+for i in {1..10}
+do
+  curl -s -H "Host: backends.example" http://localhost:8080 | jq '.pod'
+done
