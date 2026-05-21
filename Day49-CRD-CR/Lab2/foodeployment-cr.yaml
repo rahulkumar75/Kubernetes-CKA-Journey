@@ -1,0 +1,7 @@
+apiVersion: mycompany.com/v1
+kind: FooDeployment
+metadata:
+  name: foo-deployment
+spec:
+  deploymentName: foo-deployment
+  replicas: 2

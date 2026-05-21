@@ -1,0 +1,17 @@
+apiVersion: mycompany.com/v1
+kind: Database
+metadata:
+  name: mysql-db
+  namespace: db
+spec:
+  engine: mysql
+  version: "8.0"
+
+
+# schema validation. (test)
+# spec:
+#   engine: mongodb
+#   version: "8.0"
+
+# Output (Invalid Resource Creation) Rejected by API server.
+# The Database "mongodb-db" is invalid: spec.engine: Unsupported value: "mongodb": supported values: "mysql", "postgres"
