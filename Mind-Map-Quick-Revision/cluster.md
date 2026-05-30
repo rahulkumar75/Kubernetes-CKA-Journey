@@ -11,11 +11,11 @@ kubectl cluster-info    kubectl config         kubectl get nodes
         │                       │                       │
         │                       │                       │
 kubectl config         kubectl config         kubectl describe
-get-clusters           current-context        node <node-name>
+get-clusters           current-context        node node-name
         │                       │
         │                       │
                         kubectl config
-                        use-context <ctx>
+                        use-context ctx-name
 
 ────────────────────────────────────────────────────────────
 
