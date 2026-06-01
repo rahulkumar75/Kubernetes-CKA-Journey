@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: storage-test
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: storage-test
+
+  template:
+    metadata:
+      labels:
+        app: storage-test
+
+    spec:
+      containers:
+      - name: app
+        image: nginx
+
+        volumeMounts:
+        - name: data
+          mountPath: /data
+
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: mysql-pvc
