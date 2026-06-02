@@ -15,7 +15,13 @@
 
 ## 📚 About This Repository
 
-This repository documents my hands-on journey to master Kubernetes and prepare for the **Certified Kubernetes Administrator (CKA)** exam. Each folder represents a daily deep-dive into a specific Kubernetes concept — complete with YAML manifests, configuration files, and practical examples.
+This repository documents my hands-on journey to master Kubernetes and prepare for the **Certified Kubernetes Administrator (CKA)** exam. Each folder represents a deep-dive into a specific Kubernetes concept — complete with YAML manifests, configuration files, and practical examples.
+
+## Goals
+- Build strong Kubernetes fundamentals
+- Gain production-level troubleshooting skills
+- Prepare for the CKA certification
+- Strengthen DevOps engineering knowledge
 
 ---
 
