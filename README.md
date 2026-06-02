@@ -1,5 +1,5 @@
 # ☸️ Kubernetes CKA Journey
-
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/0461ba0f-58c7-49f6-938a-6f1be988e3ba" />
 <div align="center">
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
