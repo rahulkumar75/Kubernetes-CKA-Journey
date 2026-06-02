@@ -3,7 +3,7 @@
 # =========================
 
 git status                    # current changes
-git log --oneline             # compact logs
+git log --oneline -10         # compact logs
 git log --graph --oneline     # graph view
 git diff                      # unstaged changes
 git diff --staged             # staged changes

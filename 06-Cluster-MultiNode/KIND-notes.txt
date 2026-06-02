@@ -42,4 +42,3 @@ kubectl cluster-info
 ⚡ One-line Summary
 👉 Create → List → Use → Delete cluster
 
-

@@ -1,0 +1,191 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-mono); }
+.sheet { padding: 1rem 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.section { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }
+.section-header { padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.section-icon { width: 20px; height: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex-shrink: 0; }
+.section-title { font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary); font-family: var(--font-sans); }
+.cmd-list { padding: 6px 0; }
+.cmd { display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 8px; padding: 5px 14px; transition: background 0.1s; cursor: default; }
+.cmd:hover { background: var(--color-background-secondary); }
+.cmd-text { font-size: 12.5px; color: var(--color-text-primary); font-family: var(--font-mono); line-height: 1.4; }
+.cmd-text em { font-style: normal; opacity: 0.55; }
+.cmd-note { font-size: 11px; color: var(--color-text-secondary); font-family: var(--font-sans); text-align: right; line-height: 1.4; white-space: nowrap; padding-top: 1px; }
+.divider { height: 0.5px; background: var(--color-border-tertiary); margin: 0 14px; }
+.tip-bar { margin-top: 12px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 14px; display: flex; gap: 10px; align-items: flex-start; }
+.tip-label { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary); font-family: var(--font-sans); white-space: nowrap; padding-top: 1px; }
+.tip-text { font-size: 12px; color: var(--color-text-secondary); font-family: var(--font-mono); line-height: 1.6; }
+.tip-text strong { font-weight: 500; color: var(--color-text-primary); }
+
+.ic-setup { background: #EEEDFE; color: #534AB7; }
+.ic-snap { background: #E1F5EE; color: #0F6E56; }
+.ic-branch { background: #FAEEDA; color: #854F0B; }
+.ic-remote { background: #E6F1FB; color: #185FA5; }
+.ic-undo { background: #FCEBEB; color: #A32D2D; }
+.ic-history { background: #FBEAF0; color: #993556; }
+.ic-stash { background: #FAECE7; color: #993C1D; }
+.ic-merge { background: #EAF3DE; color: #3B6D11; }
+
+@media (prefers-color-scheme: dark) {
+  .ic-setup { background: #26215C; color: #AFA9EC; }
+  .ic-snap { background: #04342C; color: #5DCAA5; }
+  .ic-branch { background: #412402; color: #EF9F27; }
+  .ic-remote { background: #042C53; color: #85B7EB; }
+  .ic-undo { background: #501313; color: #F09595; }
+  .ic-history { background: #4B1528; color: #ED93B1; }
+  .ic-stash { background: #4A1B0C; color: #F0997B; }
+  .ic-merge { background: #173404; color: #97C459; }
+}
+</style>
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Git daily command reference cheat sheet</h2>
+
+<div class="sheet">
+  <div class="grid">
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ic-snap">S</div>
+        <span class="section-title">Snapshot</span>
+      </div>
+      <div class="cmd-list">
+        <div class="cmd"><span class="cmd-text">git status</span><span class="cmd-note">what's changed</span></div>
+        <div class="cmd"><span class="cmd-text">git add <em>&lt;file&gt;</em></span><span class="cmd-note">stage file</span></div>
+        <div class="cmd"><span class="cmd-text">git add .</span><span class="cmd-note">stage everything</span></div>
+        <div class="cmd"><span class="cmd-text">git add -p</span><span class="cmd-note">stage by hunk</span></div>
+        <div class="cmd"><span class="cmd-text">git diff --staged</span><span class="cmd-note">review staged</span></div>
+        <div class="divider"></div>
+        <div class="cmd"><span class="cmd-text">git commit -m <em>"msg"</em></span><span class="cmd-note">commit</span></div>
+        <div class="cmd"><span class="cmd-text">git commit --amend</span><span class="cmd-note">edit last commit</span></div>
+        <div class="cmd"><span class="cmd-text">git commit --amend --no-edit</span><span class="cmd-note">add to last commit</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ic-branch">B</div>
+        <span class="section-title">Branches</span>
+      </div>
+      <div class="cmd-list">
+        <div class="cmd"><span class="cmd-text">git branch</span><span class="cmd-note">list branches</span></div>
+        <div class="cmd"><span class="cmd-text">git switch <em>&lt;branch&gt;</em></span><span class="cmd-note">checkout</span></div>
+        <div class="cmd"><span class="cmd-text">git switch -c <em>&lt;branch&gt;</em></span><span class="cmd-note">create + checkout</span></div>
+        <div class="cmd"><span class="cmd-text">git branch -d <em>&lt;branch&gt;</em></span><span class="cmd-note">delete (safe)</span></div>
+        <div class="cmd"><span class="cmd-text">git branch -D <em>&lt;branch&gt;</em></span><span class="cmd-note">force delete</span></div>
+        <div class="cmd"><span class="cmd-text">git branch -m <em>&lt;old&gt; &lt;new&gt;</em></span><span class="cmd-note">rename</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ic-merge">M</div>
+        <span class="section-title">Merge & Rebase</span>
+      </div>
+      <div class="cmd-list">
+        <div class="cmd"><span class="cmd-text">git merge <em>&lt;branch&gt;</em></span><span class="cmd-note">merge in</span></div>
+        <div class="cmd"><span class="cmd-text">git merge --no-ff <em>&lt;branch&gt;</em></span><span class="cmd-note">preserve history</span></div>
+        <div class="cmd"><span class="cmd-text">git merge --abort</span><span class="cmd-note">cancel merge</span></div>
+        <div class="divider"></div>
+        <div class="cmd"><span class="cmd-text">git rebase <em>&lt;branch&gt;</em></span><span class="cmd-note">rebase onto</span></div>
+        <div class="cmd"><span class="cmd-text">git rebase -i HEAD~<em>N</em></span><span class="cmd-note">interactive rebase</span></div>
+        <div class="cmd"><span class="cmd-text">git cherry-pick <em>&lt;hash&gt;</em></span><span class="cmd-note">apply commit</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ic-remote">R</div>
+        <span class="section-title">Remote</span>
+      </div>
+      <div class="cmd-list">
+        <div class="cmd"><span class="cmd-text">git remote -v</span><span class="cmd-note">list remotes</span></div>
+        <div class="cmd"><span class="cmd-text">git fetch</span><span class="cmd-note">fetch all</span></div>
+        <div class="cmd"><span class="cmd-text">git pull</span><span class="cmd-note">fetch + merge</span></div>
+        <div class="cmd"><span class="cmd-text">git pull --rebase</span><span class="cmd-note">fetch + rebase</span></div>
+        <div class="cmd"><span class="cmd-text">git push</span><span class="cmd-note">push branch</span></div>
+        <div class="cmd"><span class="cmd-text">git push -u origin <em>&lt;branch&gt;</em></span><span class="cmd-note">push + track</span></div>
+        <div class="cmd"><span class="cmd-text">git push --force-with-lease</span><span class="cmd-note">safe force push</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ic-undo">U</div>
+        <span class="section-title">Undo</span>
+      </div>
+      <div class="cmd-list">
+        <div class="cmd"><span class="cmd-text">git restore <em>&lt;file&gt;</em></span><span class="cmd-note">discard changes</span></div>
+        <div class="cmd"><span class="cmd-text">git restore --staged <em>&lt;file&gt;</em></span><span class="cmd-note">unstage</span></div>
+        <div class="cmd"><span class="cmd-text">git revert <em>&lt;hash&gt;</em></span><span class="cmd-note">safe undo commit</span></div>
+        <div class="divider"></div>
+        <div class="cmd"><span class="cmd-text">git reset --soft HEAD~1</span><span class="cmd-note">undo, keep staged</span></div>
+        <div class="cmd"><span class="cmd-text">git reset --mixed HEAD~1</span><span class="cmd-note">undo, keep files</span></div>
+        <div class="cmd"><span class="cmd-text">git reset --hard HEAD~1</span><span class="cmd-note">⚠ erase commit</span></div>
+        <div class="cmd"><span class="cmd-text">git clean -fd</span><span class="cmd-note">⚠ remove untracked</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ic-stash">T</div>
+        <span class="section-title">Stash</span>
+      </div>
+      <div class="cmd-list">
+        <div class="cmd"><span class="cmd-text">git stash</span><span class="cmd-note">save dirty state</span></div>
+        <div class="cmd"><span class="cmd-text">git stash push -m <em>"name"</em></span><span class="cmd-note">named stash</span></div>
+        <div class="cmd"><span class="cmd-text">git stash list</span><span class="cmd-note">list stashes</span></div>
+        <div class="cmd"><span class="cmd-text">git stash pop</span><span class="cmd-note">apply + drop</span></div>
+        <div class="cmd"><span class="cmd-text">git stash apply <em>stash@{n}</em></span><span class="cmd-note">apply, keep stash</span></div>
+        <div class="cmd"><span class="cmd-text">git stash drop <em>stash@{n}</em></span><span class="cmd-note">delete stash</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ic-history">H</div>
+        <span class="section-title">History & Search</span>
+      </div>
+      <div class="cmd-list">
+        <div class="cmd"><span class="cmd-text">git log --oneline -10</span><span class="cmd-note">compact log</span></div>
+        <div class="cmd"><span class="cmd-text">git log --graph --oneline</span><span class="cmd-note">branch graph</span></div>
+        <div class="cmd"><span class="cmd-text">git log -p <em>&lt;file&gt;</em></span><span class="cmd-note">file history</span></div>
+        <div class="cmd"><span class="cmd-text">git show <em>&lt;hash&gt;</em></span><span class="cmd-note">inspect commit</span></div>
+        <div class="divider"></div>
+        <div class="cmd"><span class="cmd-text">git blame <em>&lt;file&gt;</em></span><span class="cmd-note">who wrote what</span></div>
+        <div class="cmd"><span class="cmd-text">git bisect start</span><span class="cmd-note">binary search bug</span></div>
+        <div class="cmd"><span class="cmd-text">git reflog</span><span class="cmd-note">full action log</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ic-setup">C</div>
+        <span class="section-title">Config & Init</span>
+      </div>
+      <div class="cmd-list">
+        <div class="cmd"><span class="cmd-text">git init</span><span class="cmd-note">new repo</span></div>
+        <div class="cmd"><span class="cmd-text">git clone <em>&lt;url&gt;</em></span><span class="cmd-note">clone remote</span></div>
+        <div class="divider"></div>
+        <div class="cmd"><span class="cmd-text">git config --global user.name</span><span class="cmd-note">set name</span></div>
+        <div class="cmd"><span class="cmd-text">git config --global user.email</span><span class="cmd-note">set email</span></div>
+        <div class="cmd"><span class="cmd-text">git config --list</span><span class="cmd-note">show config</span></div>
+        <div class="cmd"><span class="cmd-text">git tag <em>&lt;v1.0&gt;</em></span><span class="cmd-note">create tag</span></div>
+        <div class="cmd"><span class="cmd-text">git push origin --tags</span><span class="cmd-note">push tags</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tip-bar">
+    <span class="tip-label">Tips</span>
+    <span class="tip-text">
+      <strong>git diff HEAD</strong> — all unstaged changes &nbsp;·&nbsp;
+      <strong>HEAD~2</strong> — 2 commits back &nbsp;·&nbsp;
+      <strong>git log --author="name"</strong> — filter by author &nbsp;·&nbsp;
+      <strong>git push --force-with-lease</strong> over <strong>--force</strong> to avoid overwriting teammates' work
+    </span>
+  </div>
+</div>

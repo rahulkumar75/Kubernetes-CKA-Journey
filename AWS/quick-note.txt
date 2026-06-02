@@ -1,0 +1,12 @@
+which eksctl
+
+Verify: 
+eksctl version
+
+Install eksctl on macOS:
+brew tap weaveworks/tap
+brew install weaveworks/tap/eksctl
+
+Verify:
+aws --version
+
