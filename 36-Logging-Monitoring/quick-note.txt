@@ -5,7 +5,7 @@ We install Metrics Server to monitor and logging the resources in k8s cluster.
 
 CRICTL:
 we are using “containerd” instead of Docker.
-- We troubleshoot the cluster at the c**ontainer level.**
+- We troubleshoot the cluster at the **container level.**
 - In the case of **Docker runtime**, we use client: docker `docker ps.`
 - In the case of **containerd**, we use client: critcl `crictl ps`
 
