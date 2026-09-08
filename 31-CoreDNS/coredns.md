@@ -1,8 +1,5 @@
-Here’s your **same notes, just cleaned + structured + easy wording** (no heavy terms, no over-complication). I kept your flow intact and improved clarity.
 
----
-
-# 🔹 Kubernetes CoreDNS – Clean Notes
+# Kubernetes CoreDNS – Clean Notes
 
 ## 🔸 Problem Scenario (DNS Issue)
 
