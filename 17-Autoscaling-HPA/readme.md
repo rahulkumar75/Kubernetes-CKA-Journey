@@ -189,8 +189,8 @@ Check Metrics Server:
 ```bash
 kubectl top nodes
 ```
-
 If this command works, resource metrics are available.
+
 
 Also verify:
 
@@ -466,7 +466,7 @@ Fewer replicas
           More / fewer Pods created
 ```
 
-If there is insufficient Node capacity:
+## If there is insufficient Node capacity:
 
 ```text
 HPA
