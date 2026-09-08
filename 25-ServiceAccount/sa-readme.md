@@ -1,6 +1,5 @@
-## Kubernetes Service Account — Interview + Hands-on Guide (CKA / DevOps / Real World)
+## Kubernetes Service Account —
 
-Since you're preparing for Kubernetes/CKA + DevOps roles, this topic is **very important** because Service Accounts are used in:
 
 * Pods talking to Kubernetes API
 * CI/CD pipelines
