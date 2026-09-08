@@ -1,6 +1,6 @@
-**FULL HANDS-ON Scenario: Create user dev-user using CSR YAML + RBAC + kubeconfig** (very common exam task).
+**HANDS-ON Scenario: Create user dev-user using CSR YAML + RBAC + kubeconfig**.
 
-Hands-on lab** for **CSR + RBAC + kubeconfig**.
+> Hands-on for **CSR + RBAC + kubeconfig**.
 
 ---
 
