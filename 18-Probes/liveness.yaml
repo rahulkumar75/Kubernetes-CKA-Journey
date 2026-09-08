@@ -19,17 +19,3 @@ spec:
       initialDelaySeconds: 5
       periodSeconds: 5
 
-
-# 🧠 What This Pod Does
-# Creates file /tmp/healthy
-# After 30 sec → deletes it
-# Liveness probe:
-# Runs cat /tmp/healthy
-# If file exists → ✅ success
-# If file missing → ❌ failure → container restarts
-
-
-# ⚡ Expected Behavior
-# First 30 sec → Pod is healthy
-# After 30 sec → file deleted
-# Probe fails → Kubernetes restarts container
